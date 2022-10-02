@@ -1,5 +1,7 @@
 # tasks_on_python
 It is simple tasks for demonstration my skills in python
+
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
