@@ -1,4 +1,6 @@
+import calendar
 #Это простые задачки на python, для моего pet-проекта
+
 #Задачка №1
 
 #В доме есть пять свободных квартир с номерами от 1 до 5. Нужно
@@ -325,10 +327,44 @@ first_test_case.set_result('Сайт закроется!')
 first_test_case.get_test_case()
 
 
-# Простейшие арифметические операции (1)
+
+# Простейшие арифметические операции:
 #
 # Написать функцию arithmetic , принимающую 3 аргумента: первые 2 - числа, третий - операция, которая должна  быть
 # произведена над ними. Если третий аргумент + , сложить их; если — , то вычесть; * — умножить; / — разделить  (первое
 # на второе). В остальных случаях вернуть строку "Неизвестная операция ".
+#
 
-# def arithmetic(first_int, second_int, operator):
+def arithmetic(first_int, second_int, operator):
+    if operator == '+':
+        return first_int+second_int
+    elif operator == '-':
+        return first_int - second_int
+    elif operator == '*':
+        return first_int * second_int
+    elif operator == '/':
+        return first_int / second_int
+    else:
+        return "Неизвестная операция "
+
+# Високосный год
+#
+# Написать функцию is_year_leap , принимающую 1 аргумент — год, и возвращающую True, если год високосный, и False иначе.
+
+
+# первый способ
+def is_year_leap(year):
+    if '.0' in str(year/4):
+        return True
+    else:
+        return False
+
+print(is_year_leap(2020))
+
+# второй способ с использованием модуля calendar
+def is_year_leap_second_v(year):
+    if calendar.isleap(year):
+        return True
+    else:
+        return False
+print(is_year_leap_second_v(2023))

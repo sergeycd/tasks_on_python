@@ -1,4 +1,6 @@
-from dev import arithmetic
+from main import arithmetic
+from main import is_year_leap
+from main import is_year_leap_second_v
 
 
 def test_adding():
@@ -20,3 +22,13 @@ def test_division():
 def test_incorrect_sing():
     multiplication = arithmetic(2, 3,'test')
     assert multiplication=="Неизвестная операция "
+
+def test_calendar_isleap():
+    isleap=is_year_leap(2024)
+    isntleap= is_year_leap(2023)
+    assert isleap == True and isntleap == False
+
+def test_calendar_isleap_v2():
+    isleap = is_year_leap_second_v(2020)
+    isnt = is_year_leap_second_v(2021)
+    assert isleap == True and isnt == False
